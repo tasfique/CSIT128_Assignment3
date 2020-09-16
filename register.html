@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content='width=device-width, initial-scale=1' name='viewport'/>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	
+	<style type="text/css">
+
+		body 
+		{
+			background-image:url("images/backgound.jpg");
+			background-repeat: no-repeat; 
+			background-position: center center;
+			background-size: cover;
+			background-color: #d3d3d3;
+		}
+
+		div.floating { 
+			position:fixed; /*position property2*/
+			right: 0;
+			bottom: 0;
+			width: 10px;
+			margin-right:100px;
+		}
+		#header {
+			margin-top: 100px;
+		}
+		
+		#bigBox input[type=text], [type=email],[type=tel],[type=password] { /* CSS BOX MODEL*/
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		#smallBox input[name=txtName] {
+			width: 84%;
+			padding: 12px 20px;
+			display: inline-block;
+			min-width: 48.8%;
+			border: 1px;
+			border-radius: 1px;
+		
+		}
+
+		#wrapleft{
+			width: 260px;
+			height: 60px;
+			float: left; /* 1ST FLOAT */
+		}
+
+		#wrapright{
+			width: 260px;
+			height: 60px;
+			float: right; /* 2ND FLOAT */
+
+		}
+		
+		input[type=text],[type=email],[type=tel],[type=password]:enabled { /* css psuedo class 3 */
+			font-family: sans-serif;
+			font-style: italic;
+		}
+		
+
+	</style>
+
+</head>
+<body>
+	
+<div class="wrap">
+		<center><h1><span style="color: #11939a;" ><font size="6"><p>Get Ready to Ride, By Signing Up for Free</p></font></span></h1></center>
+
+		<center><h2><span style="color: #11939a;" ><p>Reliable rides in an instance</p><section>Get Started Now</section></span></h2></center>
+
+		<form>
+		<div id="smallBox">
+		
+			<div id="wrapleft">
+			First Name:<input type="text" name="txtName" id="txtFName" placeholder="First Name" pattern="[A-Z].{1,}" title="First Name must be at least 2 Character and Start with a Capital Letter" required>
+			</div>
+			<div id="wrapright"> 
+			Last Name:<input type="text" name="txtName" id="txtLName" placeholder="Last Name" pattern="[A-Z].{1,}" title="Last Name must be at least 2 Character and Start with a Capital Letter" required>
+			</div>
+			
+		</div>
+	
+		<div id="bigBox">
+		Insert Your Mobile Number (required): <input type="tel" name="txtNum1" id="txtNum1" placeholder="Phone Number: ( +601x-xxxx xxxx)" pattern="^[/+]{1}(6){1}(0){1}(1){1}[0-9]{1}-[0-9]{4} [0-9]{4}$" title="Phone Number must follow +601x-xxxx xxxx patten" required> <br/>
+		Insert Your E-mail: <input type="email" name="txtEmail" id="txtEmail" placeholder="E-mail (name@uow.edu.au)" pattern="^[^\s]+@[/uow]{3}.[/edu]{3}.[/au]{2}$" title="Insert E-Mail in the format of 'name@uow.edu.au' " required> <br/>
+		Enter your new Password: <input type="password" name="textPass" id="txtPass" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[+-/*!#@&]).{8,}$" title="Password must be a combination of Capital letter, small letter, number and special character and must be minimum 8 Characters" required><br/><br>
+		<input type="submit" value="SignUp">
+		</div>
+		</form>
+
+		<div id="TermsCondition">
+			<p>
+				You concur to Uber's <a href="https://www.uber.com/legal/terms/us/"><i>Legal terms</i></a> of Use by clicking on "Sign Up" and simply accept that you have read the <a href="https://www.uber.com/legal/community-guidelines/us-en/"><i>User agreement</i></a>.	
+			</p>
+		</div>
+</div>
+
+<div class="floating">
+	<img src="images/Logo.png" alt="uber">	
+</div>
+			
+</body>
+</html>
